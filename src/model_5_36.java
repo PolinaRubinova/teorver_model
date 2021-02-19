@@ -11,6 +11,7 @@ class model_5_36 {
     // (Задача де Мере)
 
     private static Random random = new Random();
+
     // Осуществляем 50% вероятность выигрыша партии
     private static Boolean newDigit () { return random.nextBoolean(); }
 
