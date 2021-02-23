@@ -18,7 +18,7 @@ class model_4_10 {
     }
 
     static int main() {
-        int numOfCalc = 1000000; // Количество вычислений
+        int numOfCalc = 1000; // Количество вычислений
         int result = 0; // Количество сократимых дробей
 
         for (int i = 0; i < numOfCalc; i++){

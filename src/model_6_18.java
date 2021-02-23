@@ -23,7 +23,7 @@ class model_6_18 {
         int[] finale = new int[len];
 
         // Количество вычислений для каждой стратегии ведения игры
-        int numOfCalc = 10000;
+        int numOfCalc = 1000;
 
         for (int i = 0; i < numOfCalc; i ++) {
 
