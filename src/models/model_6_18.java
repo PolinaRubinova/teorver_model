@@ -1,7 +1,9 @@
+package models;
+
 import java.util.Arrays;
 import java.util.Random;
 
-class model_6_18 {
+public class model_6_18 {
 
     // В одной из двух урн, в каждой из которых 10 шаров, один шар отмечен.
     // Играющий имеет право последовательно извлечь 20 шаров из
@@ -13,7 +15,7 @@ class model_6_18 {
 
     private static Random random = new Random();
 
-    static int main() {
+    public static int main() {
 
         int[] first = new int[10];
         int[] second = new int[10];
@@ -23,7 +25,7 @@ class model_6_18 {
         int[] finale = new int[len];
 
         // Количество вычислений для каждой стратегии ведения игры
-        int numOfCalc = 1000;
+        int numOfCalc = 10000;
 
         for (int i = 0; i < numOfCalc; i ++) {
 
@@ -41,7 +43,6 @@ class model_6_18 {
 
                 // Каждый из вариантов извлечения проверяем numOfCalc раз
                 for (int n = 0; n < numOfCalc; n++) {
-
                     // Извлекаем из первой урны
                     for (int f = 0; f <= j; f++) {
                         if (first[random.nextInt(10)] == 1) {
@@ -49,7 +50,6 @@ class model_6_18 {
                             break;
                         }
                     }
-
                     // Извлекаем из второй урны
                     for (int s = j + 1; s < len; s++) {
                         if (second[random.nextInt(10)] == 1) {
@@ -66,23 +66,22 @@ class model_6_18 {
             Arrays.fill(second, 0);
         }
 
-        // Находим максимальный элемент массива, говорящий нам максимальную вероятность
-        int maxInd = 0;
+        System.out.println("Все вероятности выигрыша при разных стратегиях:\n");
         for (int i = 0; i < len; i++) {
-            if (finale[maxInd] < finale[i]) maxInd = i;
+            System.out.println("Если " + (i + 1) + " раз вытащить шар из первой урны и " + (len - i - 1) +
+                    " раз вытащить шар из второй урны =>\nВероятность выигрыша будет составлять " +
+                    (double) finale[i] / (numOfCalc * numOfCalc) + "\n");
         }
 
-        System.out.println("Чтобы вероятность извлечения отмеченного шара " +
-                "была наибольшей, игру следует вести так:" +
+        // Находим максимальный элемент массива, говорящий нам максимальную вероятность
+        int maxInd = 0;
+        for (int i = 0; i < len; i++) if (finale[maxInd] < finale[i]) maxInd = i;
 
-        // + 1 так как индексация начинается с нуля
-                "\nНеобходимо " + (maxInd + 1) +
-                " раз вытащить шар из первой урны и " + (len - maxInd - 1) +
-                " раз вытащить шар из второй урны" +
-                "\nТаким образом, вероятность выигрыша будет составлять " +
+        System.out.println("Чтобы вероятность извлечения отмеченного шара была наибольшей, игру следует вести так:" +
+                "\nНеобходимо " + (maxInd + 1) + " раз вытащить шар из первой урны и " + (len - maxInd - 1) +
+                " раз вытащить шар из второй урны\nТаким образом, вероятность выигрыша будет составлять " +
                 (double) finale[maxInd] / (numOfCalc * numOfCalc) +
-                "\nВероятность, полученная аналитическим путем, " +
-                "при извлечении шара из первой урны 13 раз = 0.67" +
+                "\nВероятность, полученная аналитическим путем, при извлечении шара из первой урны 13 раз = 0.67" +
                 "\nРазность вероятностей, полученных различными путями = " +
                 Math.abs(((double) finale[maxInd] / (numOfCalc * numOfCalc) - 0.67)));
 

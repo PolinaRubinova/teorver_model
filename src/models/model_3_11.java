@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_3_11 {
+public class model_3_11 {
 
     // На отрезке l независимо одна от другой поставлены две точки,
     // положение каждой из которых равновозможно на этом отрезке.
@@ -11,7 +13,7 @@ class model_3_11 {
 
     private static double newDigit () { return random.nextDouble(); }
 
-    static int main() {
+    public static int main() {
 
         double l = 1.0;
         double a;

@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_4_10 {
+public class model_4_10 {
 
     // Определить вероятность того, что написанная
     // наудачу простая дробь несократима (задача Чебышева).
@@ -17,7 +19,7 @@ class model_4_10 {
         return random.nextInt(1000000);
     }
 
-    static int main() {
+    public static int main() {
         int numOfCalc = 1000; // Количество вычислений
         int result = 0; // Количество сократимых дробей
 

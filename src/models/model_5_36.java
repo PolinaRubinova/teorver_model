@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_5_36 {
+public class model_5_36 {
 
     // Два игрока условились, что выигрыш получит тот,
     // кто выиграет определенное число партий.
@@ -15,7 +17,7 @@ class model_5_36 {
     // Осуществляем 50% вероятность выигрыша партии
     private static Boolean newDigit () { return random.nextBoolean(); }
 
-    static int main() {
+    public static int main() {
         int numOfCalc = 1000000;
         int numOfGames = 5;
         int m; // Сколько партий осталось первому игроку до выигрыша первоначально

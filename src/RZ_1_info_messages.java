@@ -156,7 +156,7 @@ class RZ_1_info_messages {
                 word.delete(0, word.length());
                 count = 1000;
             }
-            System.out.println((n + 1) + " " + message + "\n");
+            writer.write("message " + (n + 1) + ": " + message + "\n\n");
             message.delete(0, message.length());
         }
 

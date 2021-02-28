@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_2_9 {
+public class model_2_9 {
 
     // 2.9. На десяти одинаковых карточках написаны различные
     // числа от нуля до десяти. Определить вероятность того,
@@ -36,7 +38,7 @@ class model_2_9 {
         return 100 * a + 10 * b + c;
     }
 
-    static int main() {
+    public static int main() {
 
         int digA = 18;
         int digB = 36;

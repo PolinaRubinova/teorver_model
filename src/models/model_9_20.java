@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_9_20 {
+public class model_9_20 {
 
     // Определить вероятность того, что при бросании n игральных
     // костей (кубиков) сумма очков на верхних гранях будет:
@@ -13,7 +15,7 @@ class model_9_20 {
     // Будем искать случайное число в диапазоне от 1 до 6
     private static int newDigit () { return random.nextInt(6) + 1; }
 
-    static int main() {
+    public static int main() {
         int n = 10; // Количество кубиков
         int m = 20; // Сумма очков на верхних гранях
 

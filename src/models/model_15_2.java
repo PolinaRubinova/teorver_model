@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_15_2 {
+public class model_15_2 {
 
     // На каждой из двух параллельных прямых независимо отмечены
     // точки с постоянным интервалом l = 100м.
@@ -45,7 +47,7 @@ print(success / tests)
 
     private static int newDigit () { return random.nextInt(10); }
 
-    static int main() {
+    public static int main() {
 
         return 0;
     }

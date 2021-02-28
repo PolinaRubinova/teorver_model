@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_14_12 {
+public class model_14_12 {
 
     // На плоскости проведены две параллельные прямые,
     // расстояние между ними L. На эту плоскость бросается круг радиуса R.
@@ -19,7 +21,7 @@ class model_14_12 {
 
     private static int newDigit () { return random.nextInt(10); }
 
-    static int main() {
+    public static int main() {
 
         return 0;
     }

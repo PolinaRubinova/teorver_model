@@ -1,7 +1,9 @@
+package models;
+
 import java.util.Arrays;
 import java.util.Random;
 
-class model_7_4 {
+public class model_7_4 {
 
     // Из партии в пять изделий наудачу взято одно изделие, оказавшееся
     // бракованным. Количество бракованных изделий равновозможно любое.
@@ -12,7 +14,7 @@ class model_7_4 {
 
     private static int newDigit () { return random.nextInt(n); }
 
-    static int main() {
+    public static int main() {
         int numOfCalc = 1000000;
         int count = 0; // Количество наудачу взятых бракованных изделий
         boolean[] Mass = new boolean[n]; // "Партия" в 5 изделий

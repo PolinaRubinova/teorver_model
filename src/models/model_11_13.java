@@ -1,8 +1,10 @@
+package models;
+
 import java.util.Random;
 
-class model_11_13 {
+public class model_11_13 {
 
-    // Вероятность тоо, что отказ прибора произойдет при числе
+    // Вероятность того, что отказ прибора произойдет при числе
     // неработоспособных элементов X = m равна:
 
     // а) для прибора А
@@ -22,7 +24,7 @@ class model_11_13 {
     private static int newDigit () { return random.nextInt(10); }
 
 
-    static int main() {
+    public static int main() {
 
 
 

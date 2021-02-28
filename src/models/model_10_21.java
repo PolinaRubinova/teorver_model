@@ -1,6 +1,8 @@
+package models;
+
 import java.util.Random;
 
-class model_10_21 {
+public class model_10_21 {
 
     // Любой из 300 абонентов независимо друг от друга звонит на коммутатор.
     // Какова вероятность того, что от них поступит в течение часа четыре
@@ -12,7 +14,7 @@ class model_10_21 {
     // Так что просто сравниваем случайное число из 100 с 1
     private static int newDigit () { return random.nextInt(100); }
 
-    static int main() {
+    public static int main() {
         int numOfCalc = 1000000; // Количество испытаний
         int numOfSubs = 300; // Количество абонентов
         int countOfCalls = 0; // Количество поступивших звонков
